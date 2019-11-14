@@ -16,7 +16,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 - Create new project in Applanga Dashboard
 - Go to `App Settings` of the project
-- Add `::/0` in the List of IP's authorized for API upload
+- Add `0.0.0.0/0` in the List of IP's authorized for API upload
 - Add `sketchId` as a Metadata field
 - Save changes
 
