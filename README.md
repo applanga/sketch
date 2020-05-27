@@ -8,7 +8,7 @@ A sketch plugin for translating sketch files with Applanga.
 
 Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
-- To localize a Sketch file [download](https://github.com/applanga/sketch/releases/download/v1.0.1/applanga.sketchplugin.zip) the latest release of the plugin
+- To localize a Sketch file [download](https://github.com/applanga/sketch/releases/download/v1.0.2/applanga.sketchplugin.zip) the latest release of the plugin
 - Un-zip & Double-click on applanga.sketchplugin, this should create a **Applanga** sub-menu under **Plugins** in Sketch
 
 
