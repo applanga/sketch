@@ -33,15 +33,18 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
     * All _(upload all artboards)_
     * Current Page _(upload artboards of the current page)_
 3. Download From Applanga
-    * Target _(download strings translated as target values)_
-    * Draft[1] _(download strings translated strings as draft values)_
-4. Update Api Token _(copy the API Token from your App settings)_
+    * Target Mode _(download strings translated as target values)_
+    * Draft Mode[1] _(download strings translated strings as draft values)_
+    * Target Mode to New File _(download strings translated as target values and save a new translated file)_
+    * Draft Mode[1] to New File _(download strings translated strings as draft values and save a new translated file)_
+4. Configure Api Token _(copy the API Token from your App settings)_
+
 
 [1]: if the draft value doesn't exist, the target value will be taken
 
 #### Exclude from Upload
 
-If you want to skip text elements from uploading to Applanga, prefix them with three underscores (___).
+If you want to skip layers, artboards or text elements from uploading to Applanga, prefix them with three underscores (___).
 
 
 ## Usage
@@ -56,13 +59,20 @@ After you made you chose the upload option form the Plugin menu, a pop-up will a
 
 The Applanga Sketch plugin can also upload the pages in the sketch file itself as a visual reference for the translation process to Applanga. For this feature, use the Upload Screenshots option from the plugin menu. 
 
-
 **How to generate translated Sketch files?**
 
 Once translations are available for your Sketch content on Applanga, you can use the plugin to generate a translated versions of your file. 
 
 From the plugin menu, choose Download from Applanga. You will need to decide to either use the Draft version of the string or the Target version. 
 
+**Important!** Before download resolved any *Missing Fonts* in your file. Translations won’t be displayed where fonts are missing. The string will remain unchanged (e.g. English)
+
 In the pop-up that appears after that, select the language you want to download. When saving the file, using the .sketch ending in the file name is mandatory. 
 
+**Uploading Translated Screenshots**
+
+If you want to upload screenshots of your translated Figma file back to Applanga, for example, if you want somebody to review the translation in-context, please follow these steps:
+
+1. Go to Download from Applanga, chose either Target or Draft mode and select the language you want to download from the pop-up
+2. After the download is finished, go to Upload Screenshots and in the pop-up select the language you want to upload translated screenshots to
 
