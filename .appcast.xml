@@ -13,5 +13,8 @@
 		<item>
 			<enclosure url="https://github.com/applanga/sketch/releases/download/v1.0.3/applanga.sketchplugin.zip" sparkle:version="1.0.3"/>
 		</item>
+		<item>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v1.0.4/applanga.sketchplugin.zip" sparkle:version="1.0.4"/>
+		</item>
 	</channel>
 </rss>
