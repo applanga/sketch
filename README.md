@@ -80,6 +80,6 @@ If you want to upload screenshots of your translated Sketch file back to Applang
 
 With this option, you can start an automated process that will, step by step, download translations for a language, take screenshots of the translated Sketch design, and upload the translated screenshots back to Applanga for all languages selected one after the other automatically. 
 
-In order to upload translated screenshots for multiple languages, in the plugin, chose the Batch Screenshot Upload option. In the subsection of the Batch option, you can select for which page (all or only the currently selected) and which set of strings (Draft or Target) will be in scope for the batch process. 
+In order to upload translated screenshots for multiple languages, in the plugin, chose the Batch Screenshot Upload option. In the subsection of the Batch option, you can select which page (all or only the currently selected) and which set of strings (Draft or Target) will be in scope for the batch process. 
 
-After you confirmed the options you will be presented with a pop-up to enter which languages should be included. The languages need to exist in your project on the Applanga dashboard. By default, all languages in your project will be included. <br><br>
+After you selected the appropriated option you will be presented with a pop-up to enter which languages should be included. The languages need to exist in your project on the Applanga dashboard. By default, all languages in your project will be included. <br><br>
