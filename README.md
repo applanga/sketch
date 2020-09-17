@@ -17,7 +17,6 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 - Create new project in Applanga Dashboard
 - Go to `App Settings` of the project
 - Add `0.0.0.0/0` in the List of IP's authorized for API upload
-- Add `sketchId` as a Metadata field
 - Save changes
 - Go to the API section in the Applanga Project Settings and click on “Show API Token” and copy the Token
 - Make sure the source language of the Sketch file (e.g. English) does exist on the Applanga dashboard
