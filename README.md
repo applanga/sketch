@@ -1,84 +1,206 @@
 # Applanga Sketch Plugin
 
-[![Applanga](https://www.applanga.com/assets/images/applanga_blue.png)](https://applanga.com)
+[<img src="https://www.applanga.com/assets/images/applanga_blue.png" style="max-width: 344px;">](https://applanga.com)
 
-A sketch plugin for translating sketch files with Applanga.  
 
-## Installation
+A Sketch plugin for translating Sketch files with Applanga.  
+
+## Table of Contents
+
+  1. [Installation in Sketch app](#installation-in-sketch-app)
+  2. [Configuration of the connected Project](#configuration-of-the-connected-project)
+  3. [Usage](#usage)
+     1. [Connection Settings](#connection-settings)
+	 2. [Uploading content for translation](#uploading-content-for-translation)
+	 3. [Translate your Sketch file](#translate-your-sketch-file)
+	 4. [Uploading translated screenshots](#uploading-translated-screenshots)
+	 5. [Uploading translated screenshots for multiple languages](#uploading-translated-screenshots-for-multiple-languages-at-once)
+	 6. [Check and Align file](#check-and-align-file)
+
+
+## Installation in Sketch app
 
 Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
-- To localize a Sketch file [download](https://github.com/applanga/sketch/releases/download/v1.0.2/applanga.sketchplugin.zip) the latest release of the plugin
-- Un-zip & Double-click on applanga.sketchplugin, this should create a **Applanga** sub-menu under **Plugins** in Sketch
+1. To localize a Sketch file [download](https://github.com/applanga/sketch/releases/latest/download/applanga.sketchplugin.zip) the latest release of the plugin
+2. Unzip & Double-click on applanga.sketchplugin, this should create a **Applanga** sub-menu under **Plugins** in Sketch
 
 
-## Configuration
+## Configuration of the connected Project
 
-- Create new project in Applanga Dashboard
-- Go to `App Settings` of the project
-- Add `0.0.0.0/0` in the List of IP's authorized for API upload
-- Save changes
-- Go to the API section in the Applanga Project Settings and click on “Show API Token” and copy the Token
-- Make sure the source language of the Sketch file (e.g. English) does exist on the Applanga dashboard
-- Open Sketch and in the Menu Bar, go to Plugins > Applanga > Configure API Token and input the Applanga API Token
+**For a new project**
 
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3a.png" style="max-width: 344px;">
+<br />
 
-## Plugin Commands
+1. Create a new project in Applanga Dashboard.
+2. Follow the prompts and select the Sketch integration option.
+3. Copy the Applanga API Token by clicking on the clipboard icon. You will need it to start using the plugin.  
+4. Click on "Go to Project" to confirm the configuration (and whitelisted IPs)
 
-1. Upload strings
-    * All _(upload strings of the whole sketch file)_
-    * Current Page _(upload strings of the current page from the sketch file)_
-2. Upload Screenshots
-    * All _(upload all artboards)_
-    * Current Page _(upload artboards of the current page)_
-3. Download From Applanga
-    * Target Mode _(download strings translated as target values)_
-    * Draft Mode[1] _(download strings translated strings as draft values)_
-    * Target Mode to New File _(download strings translated as target values and save a new translated file)_
-    * Draft Mode[1] to New File _(download strings translated strings as draft values and save a new translated file)_
-4. Configure Api Token _(copy the API Token from your App settings)_
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 344px;">
+<br />
 
 
-[1]: if the draft value doesn't exist, the target value will be taken
+**For an already existing project**
 
-#### Exclude from Upload
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3.png" style="max-width: 344px;">
+<br />
 
-If you want to skip pages, artboards or text elements from uploading to Applanga, prefix them with three underscores (___).
+1. Go to `Project Settings` of the project.
+2. Add `::/0` and `0.0.0.0/0` or the authorised IP addresses in the List of IP's authorised for API upload.
+3.  *(Optional)* Copy the Applanga API Token by clicking on "Show API key" and then the clipboard icon. You will need it to start using the plugin.
+4. Save changes.
 
 
 ## Usage
 
-**How to upload Sketch content for translation?** 
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch01.png" style="max-width: 344px;">
+<p>&nbsp;</p>
 
-After you installed the Applanga Sketch Plugin and set up the Applanga Sketch integration as described in the Configuration section, open the Sketch file you want to translate. 
+### Connection Settings
 
-Start by uploading the translatable text content. In the Menu Bar under Plugins > Applanga choose Upload Strings. You can either upload all pages or only the currently selected one. 
 
-After you made you chose the upload option form the Plugin menu, a pop-up will appear to ask you to select a source language (the current language of the file). The upload might take a moment. There will be a pop-up to confirm when the upload is done.  
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
 
-The Applanga Sketch plugin can also upload the pages in the sketch file itself as a visual reference for the translation process to Applanga. For this feature, use the Upload Screenshots option from the plugin menu. <br><br>
+1. *Applanga Project API Token*: please copy the API Token from your Applanga Project Settings page
+2. *Applanga Project Name* corresponds to the entered API token (not editable)
+3. *Save Options*: saves the Connection Settings on your local machine. The selected options are saved separately for each Sketch file and will be loaded next time you open the file on your machine and start the plugin.
 
-**How to generate translated Sketch files?**
 
-Once translations are available for your Sketch content on Applanga, you can use the plugin to generate a translated versions of your file. 
+<br />
 
-From the plugin menu, choose Download from Applanga. You will need to decide to either use the Draft version of the string or the Target version. 
+[Back to Top](#table-of-contents)
 
-**Important!** Before download resolved any *Missing Fonts* in your file. Translations won’t be displayed where fonts are missing. The string will remain unchanged (e.g. English)
+<br />
 
-In the pop-up that appears after that, select the language you want to download. When saving the file, using the .sketch ending in the file name is mandatory. <br><br>
+### Uploading content for translation
 
-**Uploading Translated Screenshots**
 
-If you want to upload screenshots of your translated Sketch file back to Applanga, for example, if you want somebody to review the translation in-context, please follow these steps:
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch03.png" style="max-width: 344px;">
 
-1. Go to Download from Applanga, chose either Target or Draft mode and select the language you want to download from the pop-up
-2. After the download is finished, go to Upload Screenshots and in the pop-up select the language you want to upload translated screenshots to <br><br>
+**Upload Options**
 
-**Uploading Translated Screenshots for multiple languages**
+* *Project Name*: this is set to the Applanga project which the plugin is currently linked via the API token (not editable)
+* *Select Language*: the source language is preselected by default, but you can select any language for upload
+* *Include Text* and *Include Screenshots*: select what should be included in the upload to your Applanga project (by default both options are selected for source language, and only the Screenshots option is selected for target language uploads)
+* *Upload new/missing text*: with this option enabled, any text present in the file and not yet on Applanga is uploaded (by default enabled)
+* *Merge new duplicated text into a single Applanga string*: when this option is enabled during upload, for every text that is not on  Applanga yet, all duplicates found in the file for that text are 'merged' into a single new Applanga string Id. If this option is disabled, one string Id is created for each of the duplicate texts (by default enabled)
+* *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
+* *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
+* *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
+* *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
+Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the “visible” property status.
+* *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
+<p>&nbsp;</p>
 
-With this option, you can start an automated process that will, step by step, download translations for a language, take screenshots of the translated Sketch design, and upload the translated screenshots back to Applanga for all languages selected one after the other automatically. 
+**Important notes!**  
 
-In order to upload translated screenshots for multiple languages, in the plugin, chose the Batch Screenshot Upload option. In the subsection of the Batch option, you can select which page (all or only the currently selected) and which set of strings (Draft or Target) will be in scope for the batch process. 
+* If you want to exclude pages or other elements from the upload, add 3 underscores in front of the element or page name (___).
+* The upload for large files, particularly when screenshot upload is included, may take several minutes.
 
-After you selected the appropriated option you will be presented with a pop-up to enter which languages should be included. The languages need to exist in your project on the Applanga dashboard. By default, all languages in your project will be included. <br><br>
+The **Upload** button is only active if there is an upload language selected and either the Text or Screenshots option is selected. The Activity log will display the progress indication and error messages.
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+**Renaming String IDs**  
+When new IDs are being created on Applanga as part of the upload, there is the option to manually edit any of those new IDs. The dialog will not display if only screenshots are being uploaded or there are no new strings to upload.
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch04.png" style="max-width: 344px;">
+
+* Click on the source text, to expand it and display the full text
+* Click on the suggested string ID name to edit it
+* Click *Confirm* to approve the edits. You can also *unconfirm* to restore the original ID name. If the *Confirm* button becomes red, the string ID name is invalid. Most often its a value conflict (the same ID name, but different source text) with an ID that already exists in Applanga or is a duplicate to a newly created ID name. Hover over the button to see a more detailed error message.
+* *Only Approved* or *All* (default) determines if all of the texts are to be uploaded to Applanga or only confirmed ones(green checkbox).  
+
+The **Upload** button starts the upload immediately. During the upload process, an activity log will inform you about the progress and any errors.
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Translate your Sketch file
+
+Once translations for your content are available on Applanga, you can use the plugin to download the translations and populate them in your file. 
+
+You may prevent any part of your file from being translated by locking or hiding the elements out of scope and/or by limiting the download to specific pages (see *Scope* below)
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch08.png" style="max-width: 344px;">
+
+**Download Options**
+
+* *Project Name* is set to the connected Applanga project via the API token (not editable)
+* *Select Language*: selects the target language to be downloaded. Please note that the *Download* button will not be active until a target language is picked (none is selected by default)
+* *Mode* determines if target translation values or draft translation values are downloaded and populate (by default Target plus Draft will be populated)
+* *Scope* determines if the whole file is processed or only the currently open page (by default all content is in scope)
+* *Overwrite Hidden Content* determines if the hidden (close/open eye icon) content is included in scope (by default excluded)
+* *Overwrite Locked Content* determines if the locked (padlock icon) content is included in scope (by default excluded)
+* *Merge Sketch text with existing Applanga strings* allows the linking of text in Sketch missing Applanga Ids to an existing Applanga string Id in the connected Applanga project. Please note, the text matching to the source text in Applanga project may not work or may give false positives if the file is (partially) translated.
+
+**Important notes!** 
+
+* Please be aware that translation download for very large files may take several minutes.
+* Note that any content that has 3 underscore characters (___) at the beginning of the element or page name is excluded from the scope.
+* The translation download will overwrite the source text in your file. It is recommended to create a copy of the file for the translation process. You can also revert back to your starting point by selecting your source language and downloading it again.
+* It may take up to 10 minutes before changes made to translations on the Applanga dashboard are available for download.
+
+
+The **Download** button starts the download immediately. The button is only active if there is a download language selected. During the download process, an activity log will inform you about the progress and any errors. 
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Uploading translated screenshots
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch05.png" style="max-width: 344px;">
+
+
+If you want to upload screenshots of your translated Sketch file back to Applanga, for example, if you want somebody to review the translation in-context, please follow these steps:  
+
+1. Go to *Download* and select a language, run the download process.
+2. After the download is finished, go to *Upload* and select the language again but make sure that you only select *Screenshots* in the *upload* options
+
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Uploading Translated Screenshots for multiple languages at once
+
+The *Batch Screenshot Upload* option can be used to start an automated process that will, step by step, download translations for a language, take screenshots of the translated Sketch design, and upload the translated screenshots back to Applanga for all languages selected one after the other automatically.
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch06.png" style="max-width: 344px;">
+
+In order to upload translated screenshots for multiple languages at once, in the plugin UI, choose the *Batch Screenshot Upload* option. In the subsection of the *Batch* option, you can select which languages to include (all or everything but source), which set of strings (*Draft or Target*), and which layers (all or only the currently selected one) will be in scope for the batch process.
+
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Check & Align File
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch07.png" style="max-width: 344px;">
+
+**Check/Fix File Options**
+
+* *Link Sketch text with existing Applanga IDs*: this option tries to match the text in the file with existing Applanga IDs. It's similar to Merge Sketch text with existing Applanga strings in download options, but is not limited to selections.
+* *Remove all linking to Applanga IDs*: this option allows users to unlink Applanga string IDs from a previously uploaded  Sketch file. When users upload a previously Applanga-integrated file to a new project, the existing Applanaga IDs can cause issues with the upload to the new project. This option prevents issues with both uploading and downloading content from Applanga. 
+* *Migrate IDs to new plugin version*: Applanga plugin update from version 1.* to 2.* changed how string IDs are stored; this option will migrate this string Id storage method if you have previously uploaded the same Sketch project with the Version 1.* plugin. This migration will **not** happen automatically during the upload or download process. 
+
+<br />
+
+[Back to Top](#table-of-contents)
