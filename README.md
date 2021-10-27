@@ -86,11 +86,14 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 * *Include Text* and *Include Screenshots*: select what should be included in the upload to your Applanga project (by default both options are selected for source language, and only the Screenshots option is selected for target language uploads)
 * *Upload new/missing text*: with this option enabled, any text present in the file and not yet on Applanga is uploaded (by default enabled)
 * *Merge new duplicated text into a single Applanga string*: when this option is enabled during upload, for every text that is not on  Applanga yet, all duplicates found in the file for that text are 'merged' into a single new Applanga string Id. If this option is disabled, one string Id is created for each of the duplicate texts (by default enabled)
+* *Set status*: this option sets a status for all new content uploaded to an Applanga project. To update the status of an already existing string on Applanga, use the *Change status* option
 * *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
 * *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
+* *Change status*: this option changes the status of an already existing string on Applanga. 
+* *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
 * *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
 * *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
-Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the “visible” property status.
+Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the â€œvisibleâ€ property status.
 * *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
 <p>&nbsp;</p>
 
