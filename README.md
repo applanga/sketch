@@ -30,7 +30,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 **For a new project**
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3a.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3a.png" style="max-width: 344px;">
 <br />
 
 1. Create a new project in Applanga Dashboard.
@@ -38,13 +38,13 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 3. Copy the Applanga API Token by clicking on the clipboard icon. You will need it to start using the plugin.  
 4. Click on "Go to Project" to confirm the configuration (and whitelisted IPs)
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 344px;">
 <br />
 
 
 **For an already existing project**
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch3.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3.png" style="max-width: 344px;">
 <br />
 
 1. Go to `Project Settings` of the project.
@@ -55,13 +55,13 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 ## Usage
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch01.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch01.png" style="max-width: 344px;">
 <p>&nbsp;</p>
 
 ### Connection Settings
 
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
 
 1. *Applanga Project API Token*: please copy the API Token from your Applanga Project Settings page
 2. *Applanga Project Name* corresponds to the entered API token (not editable)
@@ -77,7 +77,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 ### Uploading content for translation
 
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch03.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch03.png" style="max-width: 344px;">
 
 **Upload Options**
 
@@ -93,7 +93,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 * *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
 * *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
 * *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
-Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the â€œvisibleâ€ property status.
+Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the “visible” property status.
 * *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
 <p>&nbsp;</p>
 
@@ -113,7 +113,7 @@ The **Upload** button is only active if there is an upload language selected and
 **Renaming String IDs**  
 When new IDs are being created on Applanga as part of the upload, there is the option to manually edit any of those new IDs. The dialog will not display if only screenshots are being uploaded or there are no new strings to upload.
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch04.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch04.png" style="max-width: 344px;">
 
 * Click on the source text, to expand it and display the full text
 * Click on the suggested string ID name to edit it
@@ -134,7 +134,7 @@ Once translations for your content are available on Applanga, you can use the pl
 
 You may prevent any part of your file from being translated by locking or hiding the elements out of scope and/or by limiting the download to specific pages (see *Scope* below)
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch08.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch08.png" style="max-width: 344px;">
 
 **Download Options**
 
@@ -164,7 +164,7 @@ The **Download** button starts the download immediately. The button is only acti
 
 ### Uploading translated screenshots
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch05.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch05.png" style="max-width: 344px;">
 
 
 If you want to upload screenshots of your translated Sketch file back to Applanga, for example, if you want somebody to review the translation in-context, please follow these steps:  
@@ -183,7 +183,7 @@ If you want to upload screenshots of your translated Sketch file back to Applang
 
 The *Batch Screenshot Upload* option can be used to start an automated process that will, step by step, download translations for a language, take screenshots of the translated Sketch design, and upload the translated screenshots back to Applanga for all languages selected one after the other automatically.
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch06.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch06.png" style="max-width: 344px;">
 
 In order to upload translated screenshots for multiple languages at once, in the plugin UI, choose the *Batch Screenshot Upload* option. In the subsection of the *Batch* option, you can select which languages to include (all or everything but source), which set of strings (*Draft or Target*), and which layers (all or only the currently selected one) will be in scope for the batch process.
 
@@ -196,7 +196,7 @@ In order to upload translated screenshots for multiple languages at once, in the
 
 ### Check & Align File
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch07.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch07.png" style="max-width: 344px;">
 
 **Check/Fix File Options**
 
