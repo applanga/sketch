@@ -8,7 +8,7 @@ A Sketch plugin for translating Sketch files with Applanga.
 ## Table of Contents
 
   1. [Installation in Sketch app](#installation-in-sketch-app)
-  2. [Configuration of the connected Project](#configuration-of-the-connected-project)
+  2. [Configuration of the Applanga Project and Plugin](#configuration-of-the-applanga-project-and-plugin)
   3. [Usage](#usage)
      1. [Connection Settings](#connection-settings)
 	 2. [Uploading content for translation](#uploading-content-for-translation)
@@ -26,7 +26,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 2. Unzip & Double-click on applanga.sketchplugin, this should create a **Applanga** sub-menu under **Plugins** in Sketch
 
 
-## Configuration of the connected Project
+## Configuration of the Applanga Project and Plugin
 
 **For a new project**
 
@@ -51,6 +51,24 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 2. Add `::/0` and `0.0.0.0/0` or the authorised IP addresses in the List of IP's authorised for API upload.
 3.  *(Optional)* Copy the Applanga API Token by clicking on "Show API key" and then the clipboard icon. You will need it to start using the plugin.
 4. Save changes.
+
+<br />
+
+**In the Applanga Plugin**
+
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch_connection_settings.png" style="max-width: 344px;">
+<br />
+
+1. To configure the connection between the design file and the Applanga project, click *Connection Settings* on the plugin menu.
+1. Enter the Applanga Project API Token
+1. Confirm the Applanga Project Name is correct
+1. Click *Save Settings*
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
 
 
 ## Usage
@@ -92,6 +110,9 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 * *Change status*: this option changes the status of an already existing string on Applanga. 
 * *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
 * *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
+* *All Content*: All content from the design file is included in the scope of the upload
+* *Only Current Page*: Only content from the current page is included in the scope of the upload
+* *Only Selected Content*: Only the content from the selection is included in the scope of the upload
 * *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
 Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the “visible” property status.
 * *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
