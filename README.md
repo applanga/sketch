@@ -56,10 +56,10 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 **In the Applanga Plugin**
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch_connection_settings.png" style="max-width: 344px;">
+<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
 <br />
 
-1. To configure the connection between the design file and the Applanga project, click *Connection Settings* on the plugin menu.
+1. If the design file is not yet connected to an Applanga project, the plugin will open on the [*Connection Settings*](#connection-settings) page
 1. Enter the Applanga Project API Token
 1. Confirm the Applanga Project Name is correct
 1. Click *Save Settings*
@@ -101,21 +101,23 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 * *Project Name*: this is set to the Applanga project which the plugin is currently linked via the API token (not editable)
 * *Select Language*: the source language is preselected by default, but you can select any language for upload
+* *Upload Scope*
+	+ *All Content*: All content from the design file is included in the scope of the upload
+	+ *Only Current Page*: Only content from the current page is included in the scope of the upload
+	+ *Only Selected Content*: Only the content from the selection is included in the scope of the upload
 * *Include Text* and *Include Screenshots*: select what should be included in the upload to your Applanga project (by default both options are selected for source language, and only the Screenshots option is selected for target language uploads)
-* *Upload new/missing text*: with this option enabled, any text present in the file and not yet on Applanga is uploaded (by default enabled)
-* *Merge new duplicated text into a single Applanga string*: when this option is enabled during upload, for every text that is not on  Applanga yet, all duplicates found in the file for that text are 'merged' into a single new Applanga string Id. If this option is disabled, one string Id is created for each of the duplicate texts (by default enabled)
-* *Set status*: this option sets a status for all new content uploaded to an Applanga project. To update the status of an already existing string on Applanga, use the *Change status* option
-* *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
-* *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
-* *Change status*: this option changes the status of an already existing string on Applanga. 
-* *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
-* *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
-* *All Content*: All content from the design file is included in the scope of the upload
-* *Only Current Page*: Only content from the current page is included in the scope of the upload
-* *Only Selected Content*: Only the content from the selection is included in the scope of the upload
-* *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
+* *Advanced Upload Options:*
+	+ *Upload new/missing text*: with this option enabled, any text present in the file and not yet on Applanga is uploaded (by default enabled)
+	+ *Merge new duplicated text into a single Applanga string*: when this option is enabled during upload, for every text that is not on  Applanga yet, all duplicates found in the file for that text are 'merged' into a single new Applanga string Id. If this option is disabled, one string Id is created for each of the duplicate texts (by default enabled)
+	+ *Set status*: this option sets a status for all new content uploaded to an Applanga project. To update the status of an already existing string on Applanga, use the *Change status* option
+	+ *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
+	+ *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
+	+ *Change status*: this option changes the status of an already existing string on Applanga. 
+	+ *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
+	+ *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
+	+ *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
 Please note, that there may be invisible elements that will be included in scope, because they are invisible for other reasons than the “visible” property status.
-* *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
+	+ *Include Locked Content*: determines if the locked (padlock icon) content is included in translation scope (by default disabled)
 <p>&nbsp;</p>
 
 **Important notes!**  
@@ -139,7 +141,7 @@ When new IDs are being created on Applanga as part of the upload, there is the o
 * Click on the source text, to expand it and display the full text
 * Click on the suggested string ID name to edit it
 * Click *Confirm* to approve the edits. You can also *unconfirm* to restore the original ID name. If the *Confirm* button becomes red, the string ID name is invalid. Most often its a value conflict (the same ID name, but different source text) with an ID that already exists in Applanga or is a duplicate to a newly created ID name. Hover over the button to see a more detailed error message.
-* *Only Approved* or *All* (default) determines if all of the texts are to be uploaded to Applanga or only confirmed ones(green checkbox).  
+* *Only Approved* or *All* (default) determines if all of the texts are to be uploaded to Applanga or only confirmed ones(green checkbox). If any edits are made to the string IDs, only those approved will be included in the upload. 
 
 The **Upload** button starts the upload immediately. During the upload process, an activity log will inform you about the progress and any errors.
 
