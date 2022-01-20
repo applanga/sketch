@@ -56,7 +56,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 **In the Applanga Plugin**
 
-<img src="{{site.baseurl}}assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
 <br />
 
 1. If the design file is not yet connected to an Applanga project, the plugin will open on the [*Connection Settings*](#connection-settings) page
