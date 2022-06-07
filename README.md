@@ -15,6 +15,7 @@ A Sketch plugin for translating Sketch files with Applanga.
 	 3. [Translate your Sketch file](#translate-your-sketch-file)
 	 4. [Uploading translated screenshots](#uploading-translated-screenshots)
 	 5. [Uploading translated screenshots for multiple languages](#uploading-translated-screenshots-for-multiple-languages-at-once)
+	 5. [Inspect & Edit Ids](#inspect-and-edit-ids)
 	 6. [Check and Align file](#check-and-align-file)
 
 
@@ -209,6 +210,29 @@ The *Batch Screenshot Upload* option can be used to start an automated process t
 <img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch06.png" style="max-width: 344px;">
 
 In order to upload translated screenshots for multiple languages at once, in the plugin UI, choose the *Batch Screenshot Upload* option. In the subsection of the *Batch* option, you can select which languages to include (all or everything but source), which set of strings (*Draft or Target*), and which layers (all or only the currently selected one) will be in scope for the batch process.
+
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Inspect & Edit Ids
+
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch_inspectIds.png" style="max-width: 344px;">
+
+Inspect & Edit Ids allows users to view the Applanga string Ids connected to specific text in the respective design file. Users can also create new strings Ids by removing the current Id and setting a new one via the plugin.
+
+
+1. Select the element of the design file to display string Ids in the plugin
+1. Click on the *String Id* text field to edit the string Id, then select the checkmark to approve for upload (if an Id already exists for a given text on Applanga, users can search and apply that specific Id)
+1. Once Ids are updated, click *Upload*
+
+**Important Notes!**
+
+* Due to a 10-minute CDN delay, recently uploaded or changed string Ids may not display in the plugin and return a message of “No Id set yet.” Please allow 10 minutes for the cache to update and try again.
+* Screenshots are not automatically uploaded with strings when using the *Inspect & Edit Ids* option. Users can manually assign strings on the Applanga dashboard using the screens tag. See the [tags]({{site.baseurl}}docs/translation-management-dashboard/applanga-tags) page for more info.
 
 
 <br />
