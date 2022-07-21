@@ -1,9 +1,14 @@
 # Applanga Sketch Plugin
 
-[<img src="https://www.applanga.com/assets/images/applanga_blue.png" style="max-width: 344px;">](https://applanga.com)
-
+***
 
 A Sketch plugin for translating Sketch files with Applanga.  
+
+*Version:* 2.2.0
+
+*Website:* <https://www.applanga.com>
+
+***
 
 ## Table of Contents
 
