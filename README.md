@@ -4,7 +4,7 @@
 
 A Sketch plugin for translating Sketch files with Applanga.  
 
-*Version:* 2.2.0
+*Version:* 2.3.0
 
 *Website:* <https://www.applanga.com>
 
@@ -20,6 +20,7 @@ A Sketch plugin for translating Sketch files with Applanga.
 	 3. [Translate your Sketch file](#translate-your-sketch-file)
 	 4. [Uploading translated screenshots](#uploading-translated-screenshots)
 	 5. [Uploading translated screenshots for multiple languages](#uploading-translated-screenshots-for-multiple-languages-at-once)
+	 5. [Placeholders Replacement](#placeholders-replacement)
 	 5. [Inspect & Edit Ids](#inspect-and-edit-ids)
 	 6. [Check and Align file](#check-and-align-file)
 
@@ -67,8 +68,9 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 1. If the design file is not yet connected to an Applanga project, the plugin will open on the [*Connection Settings*](#connection-settings) page
 1. Enter the Applanga Project API Token
-1. Confirm the Applanga Project Name is correct
-1. Click *Save Settings*
+1. Confirm the Applanga Project Name is correct 
+1. If your Project has Branching enabled, use *Select Branch* to configure the Branch that should be used by the plugin for uploads and downloads.
+1. Click *Connect to Applanga Project*
 
 <br />
 
@@ -88,8 +90,9 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 <img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch02.png" style="max-width: 344px;">
 
 1. *Applanga Project API Token*: please copy the API Token from your Applanga Project Settings page
-2. *Applanga Project Name* corresponds to the entered API token (not editable)
-3. *Save Options*: saves the Connection Settings on your local machine. The selected options are saved separately for each Sketch file and will be loaded next time you open the file on your machine and start the plugin.
+2. *Applanga Project Name*: corresponds to the entered API token (not editable)
+3. *Select Branch*: selects a specific Branch to connect to in a Branching Project
+4. *Connect to Applanga Project*: saves the Connection Settings on your local machine. The selected options are saved separately for each Sketch file and will be loaded next time you open the file on your machine and start the plugin.
 
 
 <br />
@@ -106,6 +109,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 **Upload Options**
 
 * *Project Name*: this is set to the Applanga project which the plugin is currently linked via the API token (not editable)
+* *Branch Name*: this is set to the Applanga project Branch which the plugin is currently linked to (not editable)
 * *Select Language*: the source language is preselected by default, but you can select any language for upload
 * *Upload Scope*
 	+ *All Content*: All content from the design file is included in the scope of the upload
@@ -116,6 +120,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 	+ *Upload new/missing text*: with this option enabled, any text present in the file and not yet on Applanga is uploaded (by default enabled)
 	+ *Merge new duplicated text into a single Applanga string*: when this option is enabled during upload, for every text that is not on  Applanga yet, all duplicates found in the file for that text are 'merged' into a single new Applanga string Id. If this option is disabled, one string Id is created for each of the duplicate texts (by default enabled)
 	+ *Set status*: this option sets a status for all new content uploaded to an Applanga project. To update the status of an already existing string on Applanga, use the *Change status* option
+	+ *Apply Placeholder Conversion*: if development placeholders exist in the Applanga project and the are mapped in the Plugin [Placeholders Replacement](#placeholders-replacement) options, this will convert placeholders on download to the sketch file
 	+ *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
 	+ *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
 	+ *Change status*: this option changes the status of an already existing string on Applanga. 
@@ -168,12 +173,15 @@ You may prevent any part of your file from being translated by locking or hiding
 **Download Options**
 
 * *Project Name* is set to the connected Applanga project via the API token (not editable)
+* *Branch Name*: this is set to the Applanga project Branch which the plugin is currently linked to (not editable)
 * *Select Language*: selects the target language to be downloaded. Please note that the *Download* button will not be active until a target language is picked (none is selected by default)
+* *Refresh*: if a language was recently added to the Applanga project, click refresh to access it for plugin download (can take up to 15 minutes for recent translations to become avaialable for download via the plugin)
 * *Mode* determines if target translation values or draft translation values are downloaded and populate (by default Target plus Draft will be populated)
 * *Scope* determines if the whole file is processed or only the currently open page (by default all content is in scope)
 * *Overwrite Hidden Content* determines if the hidden (close/open eye icon) content is included in scope (by default excluded)
 * *Overwrite Locked Content* determines if the locked (padlock icon) content is included in scope (by default excluded)
 * *Merge Sketch text with existing Applanga strings* allows the linking of text in Sketch missing Applanga Ids to an existing Applanga string Id in the connected Applanga project. Please note, the text matching to the source text in Applanga project may not work or may give false positives if the file is (partially) translated.
+* *Applanga Placeholder Conversion* converts development placeholders as found in Applanga to the mapped text as set in the Plugin [Placeholders Replacement](#placeholders-replacement) options
 
 **Important notes!** 
 
@@ -216,6 +224,29 @@ The *Batch Screenshot Upload* option can be used to start an automated process t
 
 In order to upload translated screenshots for multiple languages at once, in the plugin UI, choose the *Batch Screenshot Upload* option. In the subsection of the *Batch* option, you can select which languages to include (all or everything but source), which set of strings (*Draft or Target*), and which layers (all or only the currently selected one) will be in scope for the batch process.
 
+
+<br />
+
+[Back to Top](#table-of-contents)
+
+<br />
+
+### Placeholders Replacement
+
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch_placeholders.png" style="max-width: 344px;">
+
+When transferring text from design files into app strings on Applanga, it is often necessary to add certain variables or placeholders to the text so it is usable in the app (e.g. replace numbers, counters, dates, time, etc with placeholders such as %d, %s, etc)
+
+However, these variables in the text will appear in the design files which interferes with the ability to match the design to the app 1:1
+
+The Placeholders Replacement option acts as a placeholder conversion. It allows plugin users to replace any variable found in the app's text with a predefined text element. For example, with a mapping of “%d” to “5”, the string “Lisa bought the %d apples” would appear as  “Lisa bought the {5} apples” in the design file.
+
+Replaced/Converted placeholders in the design file are written inside curly brackets {} to prevent any accidental edits to these text fields. 
+
+1. Enter the placeholder text (e.g. %d) as found in the app strings to the Placeholder column in the plugin
+1. Enter the desired text (e.g. 5) the placeholder should be replaced with on download in the Replacement Text column
+1. Click the Checkmark to save this conversion and add more
+1. Click Save to save all mapped Placeholder Replacements
 
 <br />
 
