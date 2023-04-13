@@ -39,10 +39,16 @@
 			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.0/applanga.sketchplugin.zip" sparkle:version="2.2.0"/>
 		</item>
 		<item>
-			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.0/applanga.sketchplugin.zip" sparkle:version="2.2.1"/>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.1/applanga.sketchplugin.zip" sparkle:version="2.2.1"/>
 		</item>
 		<item>
-			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.0/applanga.sketchplugin.zip" sparkle:version="2.2.2"/>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.2/applanga.sketchplugin.zip" sparkle:version="2.2.2"/>
+		</item>
+		<item>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.2.3/applanga.sketchplugin.zip" sparkle:version="2.2.3"/>
+		</item>
+		<item>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.3.0/applanga.sketchplugin.zip" sparkle:version="2.3.0"/>
 		</item>
 	</channel>
 </rss>
