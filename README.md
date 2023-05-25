@@ -43,7 +43,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 1. Create a new project in Applanga Dashboard.
 2. Follow the prompts and select the Sketch integration option.
 3. Copy the Applanga API Token by clicking on the clipboard icon. You will need it to start using the plugin.  
-4. Click on "Go to Project" to confirm the configuration (and whitelisted IPs)
+4. Click on "Go to Project" to confirm the configuration (*This will automatically whitelist all IPs so you are able to upload Sketch content to the Applanga project using the plugin! If needed, you can remove `::/0` and `0.0.0.0/0` then add your specific IP address. This will allow only you to upload content.*)
 
 <img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 344px;">
 <br />
@@ -55,9 +55,9 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 <br />
 
 1. Go to `Project Settings` of the project.
-2. Add `::/0` and `0.0.0.0/0` or the authorised IP addresses in the List of IP's authorised for API upload.
-3.  *(Optional)* Copy the Applanga API Token by clicking on "Show API key" and then the clipboard icon. You will need it to start using the plugin.
-4. Save changes.
+2. Add `::/0` and `0.0.0.0/0` or the authorized IP addresses in the List of IP's authorized for API upload. *This will authorize you to upload Sketch content to the Applanga project using the plugin!*
+3. Copy the Applanga API Token by clicking on "Show API key" and then the clipboard icon. You will need it to start using the plugin.
+4. Scroll to the bottom of the Project Settings page and click "Update".
 
 <br />
 
@@ -135,6 +135,7 @@ Please note, that there may be invisible elements that will be included in scope
 
 * If you want to exclude pages or other elements from the upload, add 3 underscores in front of the element or page name (___).
 * The upload for large files, particularly when screenshot upload is included, may take several minutes.
+* *You must whitelist your IPs in the Applanga Project Settings page before you can use the plugin!* See the [Configuration section](#configuration-of-the-applanga-project-and-plugin) for more details.
 
 The **Upload** button is only active if there is an upload language selected and either the Text or Screenshots option is selected. The Activity log will display the progress indication and error messages.
 
@@ -175,7 +176,7 @@ You may prevent any part of your file from being translated by locking or hiding
 * *Project Name* is set to the connected Applanga project via the API token (not editable)
 * *Branch Name*: this is set to the Applanga project Branch which the plugin is currently linked to (not editable)
 * *Select Language*: selects the target language to be downloaded. Please note that the *Download* button will not be active until a target language is picked (none is selected by default)
-* *Refresh*: if a language was recently added to the Applanga project, click refresh to access it for plugin download (can take up to 15 minutes for recent translations to become avaialable for download via the plugin)
+* *Refresh*: if a language was recently added to the Applanga project, click refresh to access it for plugin download (can take up to 15 minutes for recent translations to become available for download via the plugin)
 * *Mode* determines if target translation values or draft translation values are downloaded and populate (by default Target plus Draft will be populated)
 * *Scope* determines if the whole file is processed or only the currently open page (by default all content is in scope)
 * *Overwrite Hidden Content* determines if the hidden (close/open eye icon) content is included in scope (by default excluded)
@@ -284,7 +285,7 @@ Inspect & Edit Ids allows users to view the Applanga string Ids connected to spe
 **Check/Fix File Options**
 
 * *Link Sketch text with existing Applanga IDs*: this option tries to match the text in the file with existing Applanga IDs. It's similar to Merge Sketch text with existing Applanga strings in download options, but is not limited to selections.
-* *Remove all linking to Applanga IDs*: this option allows users to unlink Applanga string IDs from a previously uploaded  Sketch file. When users upload a previously Applanga-integrated file to a new project, the existing Applanaga IDs can cause issues with the upload to the new project. This option prevents issues with both uploading and downloading content from Applanga. 
+* *Remove all linking to Applanga IDs*: this option allows users to unlink Applanga string IDs from a previously uploaded  Sketch file. When users upload a previously Applanga-integrated file to a new project, the existing Applanga IDs can cause issues with the upload to the new project. This option prevents issues with both uploading and downloading content from Applanga. 
 * *Migrate IDs to new plugin version*: Applanga plugin update from version 1.* to 2.* changed how string IDs are stored; this option will migrate this string Id storage method if you have previously uploaded the same Sketch project with the Version 1.* plugin. This migration will **not** happen automatically during the upload or download process. 
 
 <br />
