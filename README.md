@@ -4,7 +4,7 @@
 
 A Sketch plugin for translating Sketch files with Applanga.  
 
-*Version:* 2.3.0
+*Version:* 2.4.0
 
 *Website:* <https://www.applanga.com>
 
@@ -21,8 +21,8 @@ A Sketch plugin for translating Sketch files with Applanga.
 	 4. [Uploading translated screenshots](#uploading-translated-screenshots)
 	 5. [Uploading translated screenshots for multiple languages](#uploading-translated-screenshots-for-multiple-languages-at-once)
 	 5. [Placeholders Replacement](#placeholders-replacement)
-	 5. [Inspect & Edit Ids](#inspect-and-edit-ids)
-	 6. [Check and Align file](#check-and-align-file)
+	 5. [Inspect & Edit Ids](#check-and-align-file)
+	 6. [Check & Align file](#check-and-fix-file-options)
 
 
 ## Installation in Sketch app
@@ -37,7 +37,7 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 
 **For a new project**
 
-<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3a.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3a.png" style="max-width: 450px;">
 <br />
 
 1. Create a new project in Applanga Dashboard.
@@ -45,13 +45,13 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 3. Copy the Applanga API Token by clicking on the clipboard icon. You will need it to start using the plugin.  
 4. Click on "Go to Project" to confirm the configuration (*This will automatically whitelist all IPs so you are able to upload Sketch content to the Applanga project using the plugin! If needed, you can remove `::/0` and `0.0.0.0/0` then add your specific IP address. This will allow only you to upload content.*)
 
-<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3b.png" style="max-width: 475px;">
 <br />
 
 
 **For an already existing project**
 
-<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3.png" style="max-width: 344px;">
+<img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch3.png" style="max-width: 550px;">
 <br />
 
 1. Go to `Project Settings` of the project.
@@ -123,7 +123,8 @@ Applanga requires [Sketch](https://www.sketch.com/) v54+ to run.
 	+ *Apply Placeholder Conversion*: if development placeholders exist in the Applanga project and the are mapped in the Plugin [Placeholders Replacement](#placeholders-replacement) options, this will convert placeholders on download to the sketch file
 	+ *Merge Sketch text with existing Applanga strings*: when this option is enabled during upload, if a entry with the exact same text already exists, the corresponding string Id is applied to the Sketch file instead of generating a new one. If multiple such matching entries exist, one is chosen randomly (by default enabled)
 	+ *Update existing Applanga strings with changes made in Sketch file*: when this option is selected, the corresponding entries on Applanga will be overwritten with the content from the Sketch file (by default enabled)
-	+ *Change status*: this option changes the status of an already existing string on Applanga. 
+	+ *Change status*: this option changes the status of an already existing string on Applanga.
+	+ *Tag all strings in scope with*: to link the strings in scope for the upload with a tag, enable this option and enter a tag name.
 	+ *Exclude untranslatable content*: this option will exclude specific types of untranslatable content from upload to the Applanga project. Options for exclusion from upload include only numbers, times and dates, special characters,Lorem ipsum placeholder text, symbols, or single characters.
 	+ *Include Screenshots without Linked Text*: if selected, screenshots that couldn't be linked to any text are uploaded to the Applanga project (by default disabled)
 	+ *Include Hidden Content*: determines if the hidden (close/open eye icon) content is included in translation scope (by default disabled).
@@ -255,7 +256,7 @@ Replaced/Converted placeholders in the design file are written inside curly brac
 
 <br />
 
-### Inspect & Edit Ids
+### Inspect and Edit Ids
 
 <img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch_inspectIds.png" style="max-width: 344px;">
 
@@ -278,7 +279,7 @@ Inspect & Edit Ids allows users to view the Applanga string Ids connected to spe
 
 <br />
 
-### Check & Align File
+### Check and Align File
 
 <img src="https://www.applanga.com/assets/images/docu/integration-documentation/sketch07.png" style="max-width: 344px;">
 
