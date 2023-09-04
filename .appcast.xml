@@ -59,5 +59,8 @@
 		<item>
 			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.4.1/applanga.sketchplugin.zip" sparkle:version="2.4.1"/>
 		</item>
+		<item>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.4.2/applanga.sketchplugin.zip" sparkle:version="2.4.2"/>
+		</item>
 	</channel>
 </rss>
