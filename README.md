@@ -29,7 +29,7 @@ A Sketch plugin for translating Sketch files with GlobalLink Strings.
 
 The GlobalLink Strings plugin requires [Sketch](https://www.sketch.com/) v54+ to run.
 
-1. To localize a Sketch file [download](https://github.com/applanga/sketch/releases/latest/download/applanga.sketchplugin.zip) the latest release of the plugin
+1. To localize a Sketch file [download](https://github.com/applanga/sketch/releases/latest/download/GlobalLinkStrings.sketchplugin.zip) the latest release of the plugin
 2. Unzip & Double-click on GlobalLinkStrings.sketchplugin, this should create a **GlobalLink Strings** sub-menu under **Plugins** in Sketch
 
 
