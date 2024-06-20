@@ -71,5 +71,8 @@
 		<item>
 			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.4.5/applanga.sketchplugin.zip" sparkle:version="2.4.5"/>
 		</item>
+		<item>
+			<enclosure url="https://github.com/applanga/sketch/releases/download/v2.5.0/GlobalLinkStrings.sketchplugin.zip" sparkle:version="2.5.0"/>
+		</item>
 	</channel>
 </rss>
